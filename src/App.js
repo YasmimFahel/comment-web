@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
+import Image from './img/images.jpg'
+
 import './App.css';
 
 function App() {
+  const [comment, setcomment] = React.useState()
+  const [allTheComments, setAllTheComments] = React.useState([])
+
+  function TextArea(eventTextArea){
+    setcomment(eventTextArea.target.value)
+  }
+
+  function ClickButton() {
+    const allTheCommentsBefore = [...allTheComments,comment]
+
+      setAllTheComments(allTheCommentsBefore)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img src={Image} alt="imagem-pessoas" />
+      <textarea onChange={TextArea}></textarea>
+      <button onClick={ClickButton}>comentar</button>
+
+      <ul>
+        {allTheComments.map ( comments => (
+          <li key={comments} > {comments} </li>
+        ))}
+      </ul>
     </div>
   );
 }
