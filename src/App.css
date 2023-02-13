@@ -1,11 +1,45 @@
 img {
-  display: block;
+  margin-top: 40px;
+  height: 50%;
+  width: 50vh;
 }
 
-textarea {
-  display: block;
+textarea{
+  height: 50%;
+  width: 50vh;
+  padding: 30px 60px;
+  resize: none;
 }
 
 button {
-  display: block;
+  height: 25%;
+  width: 25vh;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #000000;
+  color: white;
+}
+
+body {
+  background-color: rgb(202, 10, 202);
+}
+
+.container {
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 20px;
+}
+
+ul {
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
 }

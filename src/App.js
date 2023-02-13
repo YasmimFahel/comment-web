@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div class = "container">
       <img src={Image} alt="imagem-pessoas" />
       <textarea onChange={TextArea}></textarea>
       <button onClick={ClickButton}>comentar</button>
